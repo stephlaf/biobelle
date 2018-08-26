@@ -1,8 +1,14 @@
-<div class="container text-center">
-  <% @products.each do |product| %>
-    <%= product.name %>
-    <%= product.description %>
-    <%= product.price %>
-  <% end %>
-
+<div class="container text-center container-size">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-sm-4">
+        <h3> <%= link_to product.name, product_path(product.id) %> </h3>
+        
+        <p> <%= product.description %> </p>
+        <p> <%= product.price %> </p>
+        <%= image_tag product.photo %>
+        <%= link_to 'Back to home', root_path %>
+      </div>
+    <% end %>    
+  </div>
 </div>
