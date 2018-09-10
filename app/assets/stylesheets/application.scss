@@ -1,3 +1,6 @@
+// Reset scss
+@import "reset";
+
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -13,3 +16,10 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+
+.container-size {
+  border: 1px solid red;
+  width: 80vw;
+  margin-top: 70px;
+}

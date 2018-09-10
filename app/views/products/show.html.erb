@@ -1,10 +1,11 @@
 <div class="container text-center container-size">
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
+    <div class="col-md-6 col-md-offset-3">
       <h3><%= @product.name %></h3>
       <p> <%= @product.description %> </p>
       <p> <%= @product.price %> </p>
       <%= image_tag @product.photo %>
+      <%= link_to 'Back to home', root_path %>
     </div>
   </div>
 </div>
