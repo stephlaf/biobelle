@@ -10,6 +10,7 @@ gem 'rails', '5.2.1'
 gem 'redis'
 gem 'faker'
 gem "carrierwave"
+gem 'cloudinary'
 
 gem 'autoprefixer-rails'
 # gem 'materialize-sass', '~> 1.0.0.rc2'
@@ -21,6 +22,7 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'money-rails', '~>1'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

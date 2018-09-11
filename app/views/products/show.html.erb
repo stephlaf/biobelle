@@ -3,10 +3,14 @@
     <div class="col-md-6 col-md-offset-3">
       <h3><%= @product.name %></h3>
       <p> <%= @product.description %> </p>
-      <p> <%= @product.price %> </p>
-      <%= image_tag @product.photo %>
-      <%= link_to 'Back to home', root_path %>
-      <%= link_to 'Add a product', new_product_path %>
+      <p> $<%= @product.price %> </p>
+      <%= cl_image_tag(@product.photo, width: 200, height: 175, crop: :fill, class: 'product-photo') %>
+      <p>
+        <%= link_to 'Back to home', root_path %>
+      </p>
+      <p>
+        <%= link_to 'Add a product', new_product_path %>
+      </p>
     </div>
   </div>
 </div>
