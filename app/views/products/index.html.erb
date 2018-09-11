@@ -1,14 +1,13 @@
+<%= render 'shared/banner' %>
+
 <div class="container text-center container-size">
-
-<%= render 'shared/carousel' %>
-
   <div class="row">
     <% @products.each do |product| %>
-      <div class="col-md-4">
+      <div class="col-md-3 product-card">
         <h3> <%= link_to product.name, product_path(product.id) %> </h3>
         <p> <%= product.description %> </p>
         <p> <%= product.price %> </p>
-        <%= image_tag product.photo %>
+        <%= image_tag product.photo, class: 'product-photo'%>
       </div>
     <% end %>    
   </div>

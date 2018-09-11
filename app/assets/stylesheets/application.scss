@@ -11,6 +11,8 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+// @import "materialize/components/color-variables";
+// @import "materialize";
 
 // Your CSS partials
 @import "layouts/index";
@@ -20,6 +22,6 @@
 
 .container-size {
   border: 1px solid red;
-  width: 80vw;
+  width: 85vw;
   margin-top: 70px;
 }

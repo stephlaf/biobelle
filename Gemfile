@@ -9,8 +9,12 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 gem 'faker'
+gem "carrierwave"
 
 gem 'autoprefixer-rails'
+# gem 'materialize-sass', '~> 1.0.0.rc2'
+# gem 'material_icons'
+# gem 'bootstrap', '~> 4.1.3'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.0.9'
 gem 'sass-rails'
