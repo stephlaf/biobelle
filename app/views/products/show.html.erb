@@ -5,12 +5,9 @@
       <p> <%= @product.description %> </p>
       <p> $<%= @product.price %> </p>
       <%= cl_image_tag(@product.photo, width: 200, height: 175, crop: :fill, class: 'product-photo') %>
-      <p>
-        <%= link_to 'Back to home', root_path %>
-      </p>
-      <p>
-        <%= link_to 'Add a product', new_product_path %>
-      </p>
+      <p><%= link_to 'Back to home', root_path %></p>
+      <p><%= link_to 'Add a product', new_product_path %></p>
+      <p><%= link_to 'Modify product', edit_product_path %></p>
     </div>
   </div>
 </div>
