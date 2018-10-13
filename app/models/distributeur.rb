@@ -1,0 +1,2 @@
+class Distributeur < ApplicationRecord
+end

@@ -1,9 +1,7 @@
 <%= render 'shared/banner' %>
 
 <div class="container text-center container-size">
-  <h1>
-    <%= link_to 'Add a product', new_product_path %>
-  </h1>
+  <h1>Nos Produits</h1>
   <div class="row">
     <% @products.each do |product| %>
       <div id="products-index" class="col-md-3 product-card">
