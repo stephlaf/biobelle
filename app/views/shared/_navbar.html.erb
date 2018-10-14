@@ -7,15 +7,19 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-  <%= link_to "Qui est Biobelle", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= link_to "Qui est Biobelle ?", "pages/about", class: "navbar-wagon-item navbar-wagon-link" %>
   <%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= link_to "Nous rejoindre", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+  <%= mail_to "info@biobelle.ca" do %>
+    <i class="fas fa-at"></i>
+  <% end %>
+  
 
     <% if user_signed_in? %>
 
       <!-- Links when logged in -->
+
       <%= link_to "Nouveau Produit", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Nouveau Distributeur", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Nouveau Distributeur", new_distributeur_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">

@@ -10,18 +10,31 @@ class DistributeursController < ApplicationController
   end
 
   def new
+    @distributeur = Distributeur.new
   end
 
   def create
+    @distributeur = Distributeur.new(distributeur_params)
+    
+    if @distributeur.save
+      redirect_to distributeur_path(@distributeur)
+    else
+      render :new
+    end
   end
 
   def edit
+    
   end
 
   def update
+    @distributeur.update(distributeur_params)
+    redirect_to distributeur_path(@distributeur)
   end
 
   def destroy
+    @distributeur.destroy
+    redirect_to root_path
   end
 
   private

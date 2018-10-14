@@ -7,12 +7,13 @@ puts 'Seeding db'
     description: Faker::Lorem.paragraph, price: 15,
     photo: 'https://picsum.photos/150?random')
 end
-
+counter = 1
 5.times do |p|
-  p = Distributeur.create(name: "Magasin",
+  p = Distributeur.create(name: "Magasin #{counter}",
     address: "1222 à côté, Montreal",
     website: "prout@pouet.ca",
     product_list: Faker::Lorem.paragraph)
+  counter += 1
 end
 
 User.create!(email: 'annie@biobelle.ca', password: '123456')

@@ -1,0 +1,15 @@
+<div class="container text-center container-size">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h3><%= @distributeur.name %></h3>
+      <p> <%= @distributeur.address %> </p>
+      <p> $<%= @distributeur.website %> </p>
+      <p><%= link_to 'Back to home', root_path(anchor: 'products-index') %></p>
+      <% if user_signed_in? %>
+        <p><%= link_to 'Add a distributeur', new_distributeur_path %></p>
+        <p><%= link_to 'Modify distributeur', edit_distributeur_path %></p>
+        <p><%= link_to 'Delete distributeur', distributeur_path(@distributeur), method: 'delete' %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
