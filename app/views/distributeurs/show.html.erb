@@ -8,7 +8,7 @@
       <% if user_signed_in? %>
         <p><%= link_to 'Add a distributeur', new_distributeur_path %></p>
         <p><%= link_to 'Modify distributeur', edit_distributeur_path %></p>
-        <p><%= link_to 'Delete distributeur', distributeur_path(@distributeur), method: 'delete' %></p>
+        <p><%= link_to 'Delete distributeur', distributeur_path(@distributeur), method: 'delete', data: {confirm: "Are you sure?"} %></p>
       <% end %>
     </div>
   </div>
