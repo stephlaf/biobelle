@@ -6,7 +6,7 @@
     <% @products.each do |product| %>
       <div id="products-index" class="col-md-3 product-card">
         <h3> <%= link_to product.name, product_path(product.id) %> </h3>
-        <p> <%= product.description %> </p>
+        <p> <%= product.short_desc %> </p>
         <p> <%= product.price %> </p>
         <%= cl_image_tag(product.photo, width: 200, height: 175, crop: :fill, class: 'product-photo')%>
         

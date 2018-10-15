@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <h3><%= @product.name %></h3>
+      <p> <%= @product.short_desc %> </p>
       <p> <%= @product.description %> </p>
       <p> $<%= @product.price %> </p>
       <%= cl_image_tag(@product.photo, width: 200, height: 175, crop: :fill, class: 'product-photo') %>
@@ -9,7 +10,7 @@
       <% if user_signed_in? %>
         <p><%= link_to 'Add a product', new_product_path %></p>
         <p><%= link_to 'Modify product', edit_product_path %></p>
-        <p><%= link_to 'Delete product', product_path(@product), method: 'delete' %></p>
+        <p><%= link_to 'Delete product', product_path(@product), method: 'delete', data: {confirm: "Are you sure?"} %></p>
       <% end %>
     </div>
   </div>

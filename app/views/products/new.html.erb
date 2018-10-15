@@ -3,6 +3,7 @@
   <div class="product-add">
     <%= simple_form_for [@product] do |f| %>
       <%= f.input :name, label: 'Nom' %>
+      <%= f.input :short_desc, label: 'Résumé' %>
       <%= f.input :description, label: 'Description' %>
       <%= f.input :price, label: 'Prix' %>
       <%= f.input :photo %>
