@@ -3,7 +3,7 @@
 <div id="products-index", class="container text-center container-size">
   <h1>Nos Produits</h1>
   <div class="row">
-    <% @products.each do |product| %>
+    <% @products.order(name: :asc).each do |product| %>
       <%= render partial: 'shared/product_card', locals: {product: product} %>
     <% end %>    
   </div>

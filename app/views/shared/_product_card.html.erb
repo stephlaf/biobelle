@@ -2,9 +2,11 @@
   <div class="product">
     <h3> <%= link_to product.name, product_path(product.id), class:"product-name" %> </h3>
     <div class="product-short-desc">
-      <p> <%= product.short_desc %> </p>
+      <p> <%= product.short_desc.first(50)+"..." %> </p>
     </div>
     <p class="product-price"> $<%= product.price %> </p>
     <%= cl_image_tag(product.photo, width: 200, height: 175, crop: :fill, class: 'product-photo')%>
   </div> 
 </div>
+
+<!-- .split(/^(.*)[.]\s/) -->
