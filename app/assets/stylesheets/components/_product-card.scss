@@ -1,13 +1,18 @@
+#products-index h1 {
+  font-size: 40px;
+}
 .products {
-  border: 1px solid green;
+  // border: 1px solid green;
   width: 100%;
 }
 .product-card {
-  border: 1px solid blue;
+  // border: 1px solid blue;
+  box-shadow: $box-shadow;
+  border-radius: 3px;
   background: white;
   padding: 5px 15px;
   height: 60vh;
-  // margin: 15px 0px;
+  margin-bottom: 12px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -20,7 +25,7 @@
   }
 }
 .product-body {
-  border: 1px dotted black;
+  // border: 1px dotted black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -29,21 +34,25 @@
 }
 .product-name {
   font-size: 22px;
+  color: rgba(0, 0, 0, 0.75);
 }
 .product-short-desc {
   height: 100px;
   overflow: hidden;
 }
 .product-price {
+  // font-family: ARACNE_regular;
+  font-weight: bold;
+  // color: rgba(0, 0, 0, 0.75);
 }
 .product-photo {
-  border: 1px solid green;
+  // border: 1px solid green;
   // flex: 1 1 30px;
   width: 150px;
-  height: auto;  
+  height: 150px;  
 }
 .product-footer {
-  border: 1px dotted red;
+  // border: 1px dotted red;
   height: 10%;
   padding-top: 10px;
 }
