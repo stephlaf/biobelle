@@ -1,12 +1,17 @@
-<div class="col-md-3 product-card">
-  <div class="product">
-    <h3> <%= link_to product.name, product_path(product.id), class:"product-name" %> </h3>
-    <div class="product-short-desc">
-      <p> <%= product.short_desc.split(".").first%>. </p>
+<div class="col-xs-12 col-sm-6 col-md-4">
+  <div class=" product-card">
+    <div class="product-body">
+      <h3> <%= link_to product.name, product_path(product.id), class:"product-name" %> </h3>
+      <div class="product-short-desc">
+        <p> <%= product.short_desc.split(".").first %>. </p>
+      </div>
+      <%= cl_image_tag(product.photo, class: 'product-photo')%>
     </div>
-    <p class="product-price"> $<%= product.price %> </p>
-    <%= cl_image_tag(product.photo, width: 200, height: 175, crop: :fill, class: 'product-photo')%>
+    <div class="product-footer">
+      <p class="product-price"> $<%= product.price %> </p>
+    </div>
   </div> 
 </div>
 
 <!-- .split(/^(.*)[.]\s/) -->
+<!-- width: 200, height: 200, crop: :fill,  -->
