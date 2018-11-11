@@ -22,7 +22,7 @@
 
 /* Logo */
 .navbar-wagon-brand img {
-  height: 50px;
+  height: 37px;
 }
 
 /* User Avatar */
@@ -47,12 +47,17 @@
 
 /* Navbar link */
 .navbar-wagon-link {
-  color: #616668;
+  color: $blue;
+  // color: rgba(0, 0, 0, 0.85);
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: #9b248e;
+  // color: #da552f;
   text-decoration: none;
+}
+.mailto {
+  font-size: 18px;
 }
 
 /* Dropdown menu */
