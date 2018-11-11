@@ -1,0 +1,17 @@
+#footer {
+  height: 60px;
+  width: 100vw;
+  // background: rgba(25, 25, 25, 0.7);
+  background: rgb(88, 197, 244);
+  padding: 20px 15px;
+}
+#footer a {
+  color: $blue;
+  font-size: 20px;
+  &:hover {
+    color: $bb-magenta;
+  }
+}
+#footer i {
+  // font-size: 20px;
+}

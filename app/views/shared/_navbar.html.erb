@@ -56,9 +56,14 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li><%= link_to "Nos Produits", root_path(anchor: 'products-index'), class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <li><%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <li><%= link_to "Qui est Biobelle ?", "/pages/about", class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <li>
+          <%= mail_to "info@biobelle.ca", class: "navbar-wagon-item navbar-wagon-link mailto" do %>
+            <i class="fas fa-at"></i>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
