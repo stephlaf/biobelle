@@ -1,8 +1,15 @@
 .show-product-container {
   display: flex;
-  
+  border: 1px solid red;
+
 }
 
 .description-container {
   // display: flex;
+}
+.name-price {
+
+  p{
+    font-size: 20px;
+  }
 }
