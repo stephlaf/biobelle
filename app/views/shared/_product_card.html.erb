@@ -3,7 +3,7 @@
     <div class="product-body">
       <h3> <%= link_to product.name, product_path(product.id), class:"product-name" %> </h3>
       <div class="product-short-desc">
-        <p> <%= product.short_desc.split(".").first %>. </p>
+        <p> <%= product.short_desc %> </p>
       </div>
       <%= cl_image_tag(product.photo, class: 'product-photo')%>
     </div>
@@ -12,6 +12,3 @@
     </div>
   </div> 
 </div>
-
-<!-- .split(/^(.*)[.]\s/) -->
-<!-- width: 200, height: 200, crop: :fill,  -->

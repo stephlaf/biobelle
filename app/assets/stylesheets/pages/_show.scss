@@ -1,15 +1,44 @@
-.show-product-container {
-  display: flex;
-  border: 1px solid red;
+.show-wrapper{
+  // border: 1px solid red;
+  box-shadow: $box-shadow;
+  border-radius: 3px;
+  background: white;
+  margin-top: 15px;
+  // height: 90vh;
 
 }
+.nav-tabs > li > a {
+  color: $bb-black;
+}
 
-.description-container {
-  // display: flex;
+#description {
+  padding: 20px;
+}
+#ingredients {
+  padding: 20px;
 }
 .name-price {
-
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   p{
     font-size: 20px;
+  }
+}
+.nav-links {
+  // background: white;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  // box-shadow: $box-shadow;
+  p {
+    margin: 5px 17px;
+  }
+  a {
+    color: white;
+    padding: 10px;
   }
 }
