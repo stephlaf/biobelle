@@ -2,12 +2,11 @@
   <h1>Nos Distributeurs</h1>
   <div class="row">
     <% @distributeurs.each do |distributeur| %>
-      <div id="distributeurs-index" class="col-md-3 distributeur-card">
+      <div id="distributeurs-index" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 distributeur-card">
         <h3> <%= link_to distributeur.name, distributeur_path(distributeur.id) %> </h3>
         <p> <%= distributeur.website %> </p>
         <p> <%= distributeur.address %> </p>
-        <p> <%= distributeur.product_list %> </p>
-        
+        <p> <%= distributeur.product_list %> </p>    
       </div>
     <% end %>    
   </div>
