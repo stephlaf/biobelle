@@ -26,11 +26,11 @@
 
           <div class="tab-content" id="myTabContent">
             <div class="tab-pane active" id="description" role="tabpanel" aria-labelledby="descriptionTab">
-              <p> <%= @product.description %> </p>
-              <p> MODE D’EMPLOI <%= @product.usage %> </p>
+              <p> <%= simple_format(@product.description) %> </p>
+              <p> MODE D’EMPLOI <%= simple_format(@product.usage) %> </p>
             </div>
             <div class="tab-pane fade" id="ingredients" role="tabpanel" aria-labelledby="ingredientsTab">
-              <p> INGRÉDIENTS <%= @product.ingredients %> </p>
+              <p> INGRÉDIENTS <%= simple_format(@product.ingredients) %> </p>
             </div>
           </div>
         </div>

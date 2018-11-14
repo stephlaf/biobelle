@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
 
   def update
     @product.update(product_params)
+    # raise
     redirect_to product_path(@product)
   end
 
