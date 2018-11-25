@@ -1,7 +1,17 @@
-<div class="banner" style="background-image: url('<%= image_path 'fleur-lg.jpg' %>')">
-  <div class="banner-content">
-    <!-- <h1>Biobelle</h1> -->
+<!-- Mobile size -->
+
+<div class="banner banner-xs hidden-sm hidden-md hidden-lg" style="background-image: url('<%= image_path 'fleur-xs.jpg' %>')">
+  <div class="banner-content banner-content-xs">
     <p>Pour un Bien-Être Conscient</p>
-    <a class="btn btn-primary btn-lg" href="#products-index">Découvrez</a>
+    <a class="btn btn-primary btn-lg btn-custom-round" href="#products-index">Découvrez</a>
+  </div>
+</div>
+
+<!-- Other screen sizes -->
+
+<div class="banner hidden-xs" style="background-image: url('<%= image_path 'fleur-lg.jpg' %>')">
+  <div class="banner-content">
+    <p>Pour un Bien-Être Conscient</p>
+    <a class="btn btn-primary btn-lg btn-custom-round" href="#products-index">Découvrez</a>
   </div>
 </div>

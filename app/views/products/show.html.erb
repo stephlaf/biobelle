@@ -41,20 +41,20 @@
     <div class="col-xs-8 col-xs-offset-2 nav-links">
   
         <% if user_signed_in? %>
-          <p class="btn btn-primary">
+          <p class="btn btn-primary btn-custom-round">
             <%= link_to "Retour", root_path(anchor: 'products-index') %>
           </p>
-          <p class="btn btn-primary">
+          <p class="btn btn-primary btn-custom-round">
             <%= link_to 'Ajouter', new_product_path %>
           </p>
-          <p class="btn btn-primary">
+          <p class="btn btn-primary btn-custom-round">
             <%= link_to 'Modifier', edit_product_path %>
           </p>
-          <p class="btn btn-primary">
+          <p class="btn btn-primary btn-custom-round">
             <%= link_to 'Retirer', product_path(@product), method: 'delete', data: {confirm: "Vous êtes certaine, madame la présidente ?"} %>
           </p>
         <% else %>
-          <p class="btn btn-primary">
+          <p class="btn btn-primary btn-custom-round">
             <%= link_to "Retour à l'accueil", root_path(anchor: 'products-index') %>
           </p>
         <% end %>

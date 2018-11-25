@@ -11,12 +11,12 @@
         
           <% if distributeur.facebook? %>
 
-            <%= link_to distributeur.facebook, :class=> "social-links" do %>
-                <i class="fab fa-facebook-f" aria-hidden="true" target="_blank"></i>
+            <%= link_to distributeur.facebook, :class=> "social-links", target: 'blank' do %>
+                <i class="fab fa-facebook-f"></i>
             <% end %>
           <% elsif distributeur.instagram? %>
-            <%= link_to distributeur.instagram, :class=> "social-links" do %>
-                <i class="fab fa-instagram" aria-hidden="true" target="_blank"></i>
+            <%= link_to distributeur.instagram, :class=> "social-links", target: 'blank' do %>
+                <i class="fab fa-instagram"></i>
             <% end %>
           <% end %>
       </ul>

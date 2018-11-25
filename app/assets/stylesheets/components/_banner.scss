@@ -6,11 +6,33 @@
   background-size: cover !important;
   background-position: center;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  justify-content: center;
   margin-top: 70px;
   box-shadow: 0px 0px 5px rgba(100, 100, 100, 0.1);
 }
+.banner-xs {
+  background-position: right;
+  justify-content: center;
+}
+.banner-content {
+  padding-left: 75px;
+  a {
+    font-family: Lato;
+    font-weight: 100;
+    &:hover {
+      color: $bb-yellow;
+    }
+  }
+}
+.banner-content-xs {
+  padding: 2px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-end;
+  // // align-items: center;
+}
+
 .banner h1 {
   font-size: 50px;
   font-weight: bold;
@@ -20,6 +42,15 @@
   font-size: 25px;
   font-weight: lighter;
   color: rgb(255, 255, 255);
-  opacity: 0.6;
+  opacity: 0.95;
   margin-bottom: 30px;
+  // font-family: Lato;
+}
+.btn-custom-round {
+  border-radius: 23px;
+  font-family: Lato;
+  font-weight: 100;
+  a:hover {
+    color: $bb-yellow;
+  }
 }

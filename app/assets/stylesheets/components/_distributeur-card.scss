@@ -26,9 +26,19 @@
   justify-content: space-between;
   align-items: center;
   color: rgba(0, 0, 0, 0.85);
+  // opacity: 0.7;
+  transition: all 0.4s ease;
+  &:hover {
+  background: rgba(205, 210, 0, 0.75);
+    // opacity: 1;
+  }
   h3 {
-    font-size: 22px;
+    font-family: Aracne Soft Cond Reg;
+    font-size: 29px;
     margin-bottom: 0;
+  }
+  a:hover {
+    color: $bb-magenta;
   }
   p {
     font-size: 14px;
@@ -49,7 +59,7 @@
 //   font-family: Lato;
 //   font-weight: 300;
 // }
-// .product-name {
+// .distributeur-name {
 //   font-size: 29px;
 //   // color: rgba(0, 0, 0, 0.85);
 //   font-family: Aracne Soft Cond Reg;
