@@ -28,6 +28,11 @@
             <% end %>
           <% end %>
         </li>
+        <% if user_signed_in? %>
+          <li>
+              <%= link_to "Edit", distributeur_path(distributeur.id) %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
