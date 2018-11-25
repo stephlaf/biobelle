@@ -10,7 +10,7 @@
   <%= link_to "Nos Produits", root_path(anchor: 'products-index'), class: "navbar-wagon-item navbar-wagon-link" %>
   <%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %>
   <%= link_to "Qui est Biobelle ?", "/pages/about", class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= mail_to "info@biobelle.ca", class: "navbar-wagon-item navbar-wagon-link mailto" do %>
+  <%= mail_to "info@biobelle.ca", subject: "J'ai une petite question...", class: "navbar-wagon-item navbar-wagon-link mailto" do %>
     <i class="fas fa-at"></i>
   <% end %>
   

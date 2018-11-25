@@ -7,19 +7,29 @@
         <div class="col-xs-12 col-sm-6">
           <div class="name-price">
             <h3><%= @distributeur.name %></h3>
-            <p> <%= @distributeur.address %> </p>
+            <p> <%= simple_format (@distributeur.address) %> </p>
             <p> <%= link_to "#{ @distributeur.website.split("/").last }", @distributeur.website, target: 'blank' %> </p>
             
-            <% if @distributeur.facebook? %>
+            <div class="distributeur-footer footer-height">
+              <ul class="list-inline">
+                <li>
+                  <% if @distributeur.facebook? %>
+                    <%= link_to @distributeur.facebook, class: "social-links", target: 'blank' do %>
+                        <i class="fab fa-facebook-f"></i>
+                    <% end %>
+                  <% end %>
+                </li>
 
-              <%= link_to @distributeur.facebook, :class=> "social-links" do %>
-                  <i class="fab fa-facebook-f" aria-hidden="true" target="_blank"></i>
-              <% end %>
-            <% elsif @distributeur.instagram? %>
-              <%= link_to @distributeur.instagram, :class=> "social-links" do %>
-                  <i class="fab fa-instagram" aria-hidden="true" target="_blank"></i>
-              <% end %>
-            <% end %>
+                <li>
+                  <% if @distributeur.instagram? %>
+                    <%= link_to @distributeur.instagram, class: "social-links", target: 'blank' do %>
+                        <i class="fab fa-instagram"></i>
+                    <% end %>
+                  <% end %>
+                </li>
+              </ul>
+            </div>
+            
 
           </div>
         </div>
@@ -46,6 +56,7 @@
               </p>
             <% end %>
         </div>
+
       </div>
     </div>
   </div>

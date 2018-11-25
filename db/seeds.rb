@@ -15,5 +15,3 @@ counter = 1
     product_list: Faker::Lorem.paragraph)
   counter += 1
 end
-
-User.create!(email: 'annie@biobelle.ca', password: '123456')
