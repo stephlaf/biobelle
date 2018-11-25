@@ -44,6 +44,6 @@ class DistributeursController < ApplicationController
   end
 
   def distributeur_params
-    params.require(:distributeur).permit(:name, :address, :product_list, :website, :photo)
+    params.require(:distributeur).permit(:name, :address, :product_list, :website, :facebook, :instagram, :photo)
   end
 end

@@ -9,6 +9,18 @@
             <h3><%= @distributeur.name %></h3>
             <p> <%= @distributeur.address %> </p>
             <p> <%= link_to "#{ @distributeur.website.split("/").last }", @distributeur.website, target: 'blank' %> </p>
+            
+            <% if @distributeur.facebook? %>
+
+              <%= link_to @distributeur.facebook, :class=> "social-links" do %>
+                  <i class="fab fa-facebook-f" aria-hidden="true" target="_blank"></i>
+              <% end %>
+            <% elsif @distributeur.instagram? %>
+              <%= link_to @distributeur.instagram, :class=> "social-links" do %>
+                  <i class="fab fa-instagram" aria-hidden="true" target="_blank"></i>
+              <% end %>
+            <% end %>
+
           </div>
         </div>
 

@@ -5,7 +5,20 @@
       <%= cl_image_tag(distributeur.photo, class: 'product-photo')%>
       <ul>
         <li> <%= simple_format (distributeur.address) %> </li>
-        <li> <%= link_to "#{ distributeur.website.split("/").last }", distributeur.website, target: 'blank' %> </li>
+        <li> 
+          <%= link_to "#{ distributeur.website.split("/").last }", distributeur.website, target: 'blank' %>
+        </li>
+        
+          <% if distributeur.facebook? %>
+
+            <%= link_to distributeur.facebook, :class=> "social-links" do %>
+                <i class="fab fa-facebook-f" aria-hidden="true" target="_blank"></i>
+            <% end %>
+          <% elsif distributeur.instagram? %>
+            <%= link_to distributeur.instagram, :class=> "social-links" do %>
+                <i class="fab fa-instagram" aria-hidden="true" target="_blank"></i>
+            <% end %>
+          <% end %>
       </ul>
     </div>
   </div>
