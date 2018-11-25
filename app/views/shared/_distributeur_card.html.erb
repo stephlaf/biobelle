@@ -1,7 +1,7 @@
 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
   <div class="distributeur-card">
     <div class="distributeur-body">
-      <h3> <%= link_to distributeur.name, distributeur_path(distributeur.id) %> </h3>
+      <h3> <%= distributeur.name %> </h3>
       <%= cl_image_tag(distributeur.photo, class: 'product-photo')%>
       <ul>
         <li> <%= simple_format (distributeur.address) %> </li>
