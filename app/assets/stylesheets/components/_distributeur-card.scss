@@ -1,0 +1,97 @@
+#distributeurs-index {
+  width: 85vw;
+}
+// #products-index h1 {
+//   font-size: 34px;
+//   font-family: ModernBrush-Regular;
+//   font-weight: 400;
+//   color: #9b248e;
+//   text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.4);
+// }
+// .products {
+//   // border: 1px solid green;
+//   width: 100%;
+// }
+.distributeur-card {
+  // border: 1px solid blue;
+  box-shadow: $box-shadow;
+  border-radius: 3px;
+  background: white;
+  padding: 5px 15px;
+  height: 60vh;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.85);
+  h3 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 14px;
+  }
+}
+// .product-body {
+//   // border: 1px dotted black;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+//   height: 90%;
+//   font-family: Lato;
+//   font-weight: 300;
+// }
+// .product-name {
+//   font-size: 29px;
+//   // color: rgba(0, 0, 0, 0.85);
+//   font-family: Aracne Soft Cond Reg;
+// }
+// .product-name:hover {
+//   text-decoration: none;
+//   color: $bb-magenta;
+// }
+// .product-short-desc {
+//   padding: 3px 5px 0 5px;
+//   height: 100px;
+//   overflow: auto;
+//   box-shadow: $box-shadow;
+// }
+// .product-price {
+//   // font-family: ARACNE_regular;
+//   // font-weight: bold;
+//   // color: rgba(0, 0, 0, 0.75);
+// }
+// .product-photo {
+//   // border: 1px solid green;
+//   // flex: 1 1 30px;
+//   // height: 150px;  
+//   // max-width: 110px;
+//   // height: auto;
+//   // max-height: 140px;
+//   max-height: 50%;
+//   width: auto; 
+// }
+// .product-photo-xs {
+//   max-height: 70%;
+//   // max-height: 180px;
+//   width: auto;
+// }
+// .product-footer {
+//   // border: 1px dotted red;
+//   height: 10%;
+//   padding-top: 10px;
+// }
+
+
+
+// .product-add {
+//   border: 1px solid orange;
+//   // height: 40vh;
+//   // margin: 15px 5px;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+// }

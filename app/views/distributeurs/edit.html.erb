@@ -5,7 +5,9 @@
       <%= f.input :name, label: 'Nom' %>
       <%= f.input :address, label: 'Adresse' %>
       <%= f.input :website, label: 'Site Web' %>
-      <%= f.input :product_list, label: 'Produits' %>
+      <%= cl_image_tag(@distributeur.photo, width: 175, height: 175, crop: :fill, class: 'product-photo') %>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit 'Sauvegardez', class: 'btn btn-info btn-sm m-b' %>
     <% end %>
   </div>
