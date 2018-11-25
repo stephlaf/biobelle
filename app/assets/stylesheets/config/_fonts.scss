@@ -7,17 +7,17 @@ $headers-font: "Montserrat", "Helvetica", "sans-serif";
 
 @font-face {
   font-family: 'Aracne Soft Cond Reg';
-  src: url('AracneSoftCondReg.ttf');
+  src: asset-path('AracneSoftCondReg.ttf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'ARACNE_regular';
-  src: url('ARACNE_regular.ttf');
+  src: asset-path('ARACNE_regular.ttf');
 }
 @font-face {
   font-family: 'ModernBrush-Regular';
-  src: url('ModernBrush-Regular.ttf');
+  src: asset-path('ModernBrush-Regular.ttf');
 }
 
 
