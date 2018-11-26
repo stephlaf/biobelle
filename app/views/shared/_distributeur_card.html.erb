@@ -2,7 +2,7 @@
   <div class="distributeur-card">
     <div class="distributeur-body">
       <h3> <%= distributeur.name %> </h3>
-      <%= cl_image_tag(distributeur.photo, class: 'product-photo')%>
+      <%= cl_image_tag(distributeur.photo, alt: "Logo #{distributeur.name}", class: 'product-photo')%>
       <ul>
         <li> <%= simple_format (distributeur.address) %> </li>
         <li> 
