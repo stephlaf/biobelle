@@ -5,8 +5,8 @@
       <div class="product-short-desc hidden-xs">
         <p> <%= product.short_desc %> </p>
       </div>
-        <%= cl_image_tag(product.photo, class: 'product-photo hidden-xs')%>
-        <%= cl_image_tag(product.photo, class: 'product-photo-xs hidden-sm hidden-md hidden-lg')%>
+        <%= cl_image_tag(product.photo, alt: product.name, class: 'product-photo hidden-xs')%>
+        <%= cl_image_tag(product.photo, alt: product.name, class: 'product-photo-xs hidden-sm hidden-md hidden-lg')%>
     </div>
     <div class="product-footer">
       <p class="product-price"> $<%= product.price %> </p>
