@@ -69,7 +69,7 @@
 .navbar-wagon-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: rgb(20, 20, 20) !important;
+  color: rgb(97, 97, 97) !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
@@ -89,4 +89,8 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+.dropdown-big {
+  font-size: 30px;
+  color: rgb(15, 15, 15);
 }
