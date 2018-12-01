@@ -60,7 +60,7 @@
         <li><%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li><%= link_to "Qui est Biobelle ?", "/pages/about", class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li>
-          <%= mail_to "info@biobelle.ca", id: "mailto-drop", class: "navbar-wagon-item navbar-wagon-link" do %>
+          <%= mail_to "info@biobelle.ca", id: "mailto-drop", subject: "J'ai une petite question...", class: "navbar-wagon-item navbar-wagon-link" do %>
             <i class="far fa-envelope"></i>
           <% end %>
         </li>
