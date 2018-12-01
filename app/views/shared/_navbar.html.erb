@@ -10,8 +10,8 @@
   <%= link_to "Nos Produits", root_path(anchor: 'products-index'), class: "navbar-wagon-item navbar-wagon-link" %>
   <%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %>
   <%= link_to "Qui est Biobelle ?", "/pages/about", class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= mail_to "abya68@hotmail.com", subject: "J'ai une petite question...", class: "navbar-wagon-item navbar-wagon-link mailto" do %>
-    <i class="fas fa-at"></i>
+  <%= mail_to "info@biobelle.ca", subject: "J'ai une petite question...", class: "navbar-wagon-item navbar-wagon-link mailto" do %>
+    <i class="far fa-envelope"></i>
   <% end %>
   
 
@@ -60,8 +60,8 @@
         <li><%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li><%= link_to "Qui est Biobelle ?", "/pages/about", class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li>
-          <%= mail_to "info@biobelle.ca", class: "navbar-wagon-item navbar-wagon-link mailto" do %>
-            <i class="fas fa-at"></i>
+          <%= mail_to "info@biobelle.ca", id: "mailto-drop", class: "navbar-wagon-item navbar-wagon-link" do %>
+            <i class="far fa-envelope"></i>
           <% end %>
         </li>
         
