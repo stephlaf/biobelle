@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   end
   resources :products, :distributeurs
   resources :pages, as: :pages
+  get "/sitemap.xml" => "sitemaps#index", defaults: { format: "xml"}, as: :sitemap
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
