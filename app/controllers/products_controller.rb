@@ -40,10 +40,10 @@ class ProductsController < ApplicationController
   private
 
   def set_product
-    @product = Product.find(params[:id])
+    @product = Product.friendly.find(params[:id])
   end
 
   def product_params
-    params.require(:product).permit(:name, :description, :short_desc, :price, :photo, :format, :usage, :ingredients)
+    params.require(:product).permit(:name, :description, :short_desc, :price, :photo, :format, :usage, :ingredients, :slug)
   end
 end
