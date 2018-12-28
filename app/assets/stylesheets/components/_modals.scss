@@ -1,0 +1,23 @@
+.modal-body {
+  font-weight: lighter;
+  font-size: 1.7rem;
+  img {
+    box-shadow: $box-shadow;
+    margin-bottom: 14px;
+  }
+}
+.modal-title {
+  color: $blue;
+}
+.photos {
+  padding: 10px;
+}
+.about-cards {
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: $box-shadow;
+}
+.btn:focus {
+  outline: none;
+}
+
