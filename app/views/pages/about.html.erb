@@ -1,60 +1,154 @@
 <div id="about" class="container text-center container-size">
   <h1>Qui est Biobelle ?</h1>
-  <div class="grid">
-    <section class="about">
-      <h3>Notre compagnie</h3>
-      <p>
-        Inspirée par tout ce que la Nature nous offre pour se guérir et prendre soin de soi, Biobelle en a fait sa mission de vous procurer des produits cosmétiques et de soins de la peau de haute qualité, authentiques, entièrement naturels et faits à la main.
-      </p>
-      <p>
-        Pour un Bien-Être Conscient, c'est être conscient de nos choix, des conséquences de nos actions et de nos pensées. C'est aussi poser les gestes de façon consciente : Biobelle dans la confection de nos produits et vous, chers clients, dans leur utilisation.
-      </p>
-      
-      <ul>
-        <li>Des produits de qualité supérieure</li>
-        <li>Un réel souci du bien-être de nos clients</li>
-        <li>Des prix toujours abordables</li>
-      </ul>
-      
-    </section>
-
-    <section class="team">
-      <h3>Notre équipe - Annie et Stéphane</h3>
-      <p>
-        Annie, certifiée en enseignement du yoga chez Satyam et rayon de soleil incarné, a suivi une formation complète en fabrication de produits cosmétiques et thérapeutiques avec Stéphanie Plamondon de Noblessence en 2013.
-      </p>
-      <p>
-        De plus en plus consciente des effets néfastes sur la santé de tous ces ingrédients qui se retrouvent littéralement par milliers dans les produits cosmétiques industriels (pensons au propylène glycol, aux phtalates, parabènes, SLS, PEGs, triclosan, etc...), Annie a décidé de créer ses propres produits 100% naturels et exempts d’ingrédients nocifs.
-      </p>
-      <p>
-        Chaque ingrédient entrant dans leur composition est choisi méticuleusement pour ses propriétés thérapeutiques, ainsi que pour son odeur. Ainsi, en plus d'être excellent pour la peau, il ressort de chaque produit une une signature olfactive unique, qui contribue également au bien-être.
-      </p>
-      <p>
-        Stéphane, développeur web, passionné de musique et de Médecine Chinoise, apporte la structure et l'ancrage nécessaires à la créativité et aux inspirations d'Annie. Il s'occupe du web et de la rédaction des textes.
-      </p>
-      <p>
-        Ensemble, ils se complètent, s'inspirent et se supportent dans la création, le développement et la distribution de produits sains, naturels et authentiques.
-      </p>
-      
-    </section>
+  <div class="row">
     
-    <section class="stories">
-      <h3>Témoignages</h3>
-      <ul>
-        <li>
-          “(À propos du Déo) Meilleure recette conçue ever. Je suis franchement très impressionnée par le produit ; ça fonctionne vraiment très, très bien et il sent magnifiquement bon ! ”<br>
-          Micheline S., Montréal
-        </li>
-        <li>
-            "Coup de coeur pour le Sérum Visage ! À utiliser quotidiennement pour redonner souplesse et éclat ; l'effet est instantané ! Un must pour tous les types de peau. L'essayer, c'est l'adopter.”<br>
-          Caroline T., Greenfield Park
-        </li>
-        <li>
-            "Tes produits sont trop, trop top ; je suis fan !”<br>
-          Maely E., Estavayer, Suisse
-        </li>
-      </ul>
-    </section>
-  </div>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="about-cards">
+        <div class="photos">
+          <%= image_tag('biobelle-produits', width: '100%') %>
+        </div>
 
+        <!-- Button trigger about modal -->
+        <button type="button" class="btn btn-primary btn-custom-round" data-toggle="modal" data-target="#aboutModal">
+          <a> Notre compagnie</a>
+        </button>
+      </div>
+    </div>
+
+     <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="about-cards">
+        <div class="photos">
+          <%= image_tag('biobelle-annie-et-steph', width: '100%') %>
+        </div>
+      
+        <!-- Button trigger team modal -->
+        <button type="button" class="btn btn-primary btn-custom-round" data-toggle="modal" data-target="#teamModal">
+          <a> Notre Équipe </a>
+        </button>
+      </div>
+    </div>
+
+    
+     <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="about-cards">
+        <div class="photos">
+          <%= image_tag('biobelle-temoignages', width: '100%') %>
+        </div>
+      
+        <!-- Button trigger stories modal -->
+        <button type="button" class="btn btn-primary btn-custom-round" data-toggle="modal" data-target="#storiesModal">
+          <a> Témoignages </a>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Notre compagnie</h4>
+      </div>
+      <div class="modal-body">
+        <div class="about">
+          <%= image_tag('biobelle-tournesols', width: '100%') %>
+          <p>
+            Inspirée par tout ce que la Nature nous offre pour se guérir et prendre soin de soi, Biobelle en a fait sa mission de vous procurer des produits cosmétiques et de soins de la peau de haute qualité, authentiques, entièrement naturels et faits à la main.
+          </p>
+          <p>
+            Pour un Bien-Être Conscient, c'est être conscient de nos choix, des conséquences de nos actions et de nos pensées. C'est aussi poser les gestes de façon consciente : Biobelle dans la confection de nos produits et vous, chers clients, dans leur utilisation.
+          </p>
+          
+          <ul>
+            <li>Des produits de qualité supérieure</li>
+            <li>Un réel souci du bien-être de nos clients</li>
+            <li>Des prix toujours abordables</li>
+          </ul>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-custom-round" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="teamModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Notre équipe - Annie et Stéphane</h4>
+      </div>
+      <div class="modal-body">
+        <div class="team">
+          <%= image_tag('biobelle-annie-yoga', width: '100%') %>
+          <p>
+            Annie, certifiée en enseignement du yoga chez Satyam et rayon de soleil incarné, a suivi une formation complète en fabrication de produits cosmétiques et thérapeutiques avec Stéphanie Plamondon de Noblessence en 2013.
+          </p>
+          <p>
+            De plus en plus consciente des effets néfastes sur la santé de tous ces ingrédients qui se retrouvent littéralement par milliers dans les produits cosmétiques industriels (pensons au propylène glycol, aux phtalates, parabènes, SLS, PEGs, triclosan, etc...), Annie a décidé de créer ses propres produits 100% naturels et exempts d’ingrédients nocifs.
+          </p>
+          <p>
+            Chaque ingrédient entrant dans leur composition est choisi méticuleusement pour ses propriétés thérapeutiques, ainsi que pour son odeur. Ainsi, en plus d'être excellent pour la peau, il ressort de chaque produit une une signature olfactive unique, qui contribue également au bien-être.
+          </p>
+          <%= image_tag('biobelle-steph-portrait', width: '100%') %>
+          <p>
+            Stéphane, développeur web, passionné de musique et de Médecine Chinoise, apporte la structure et l'ancrage nécessaires à la créativité et aux inspirations d'Annie. Il s'occupe du web et de la rédaction des textes.
+          </p>
+          <p>
+            Ensemble, ils se complètent, s'inspirent et se supportent dans la création, le développement et la distribution de produits sains, naturels et authentiques.
+          </p>
+          
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-custom-round" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="storiesModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-center" id="myModalLabel">Témoignages</h4>
+      </div>
+      <div class="modal-body">
+        <div class="stories">
+          <%= image_tag('biobelle-annie-mesange', width: '100%') %>
+          <ul>
+            <li>
+              “(À propos du Déo) Meilleure recette conçue ever. Je suis franchement très impressionnée par le produit ; ça fonctionne vraiment très, très bien et il sent magnifiquement bon !”<br>
+              Micheline S., Montréal
+            </li>
+            <li>
+                "Coup de coeur pour le Sérum Visage ! À utiliser quotidiennement pour redonner souplesse et éclat ; l'effet est instantané ! Un must pour tous les types de peau. L'essayer, c'est l'adopter.”<br>
+              Caroline T., Greenfield Park
+            </li>
+            <li>
+                "Tes produits sont trop, trop top ; je suis fan !”<br>
+              Maely E., Estavayer, Suisse
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-custom-round" data-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
 </div>

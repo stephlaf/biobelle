@@ -51,7 +51,13 @@
   border-radius: 23px;
   font-family: Lato;
   font-weight: 100;
+  a {
+    color: white;
+  }
   a:hover {
+    color: $bb-yellow;
+  }
+  p:hover {
     color: $bb-yellow;
   }
 }
