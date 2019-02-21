@@ -3,7 +3,16 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [ :show, :edit, :update, :destroy ]
   
   def index
-    @products = policy_scope(Product)
+    # @products = policy_scope(Product)
+
+    if params[:query].present?
+      @products =  policy_scope(Product).search_by_all_fields(params[:query])
+      # raise
+      # binding.pry
+      # @products = Product.search_by_all_fields(params[:query])
+    else
+      @products =  policy_scope(Product)
+    end
   end
 
   def show

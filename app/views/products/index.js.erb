@@ -1,0 +1,14 @@
+
+document.getElementById('index').scrollIntoView();
+
+var productsContainer = document.getElementById('js-products');
+
+productsContainer.innerHTML = "";
+
+<% if @products.empty? %>
+  productsContainer.insertAdjacentHTML("afterbegin", "<h2> Aucun produit ne correspond à votre recherche</h2><br/><br/>");
+<% end %>
+
+<% @products.order(name: :asc).each do |product| %>
+  productsContainer.insertAdjacentHTML("beforeend", "<%= j(render partial: 'shared/product_card', locals: {product: product}) %>");
+<% end %>

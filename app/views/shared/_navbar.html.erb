@@ -4,6 +4,12 @@
     <%= image_tag "logo.png", height: 50 %>
   <% end %>
 
+  <!-- Search Field -->
+  <form id="search-form" action="/products" autocomplete="off" data-remote="true">
+    <input type="text" name='query' class="" placeholder="Cherchez !">
+    <input type="submit" value="?" class="">
+  </form>
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
