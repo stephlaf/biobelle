@@ -1,0 +1,24 @@
+var productsContainer = document.getElementById('js-products');
+var modal = document.getElementById('searchModal');
+var eventsArray = ['click', 'keydown', 'touchstart'];
+var searchField = document.getElementById('search-field');
+var blurSearchField = () => { searchField.blur() };
+
+<% if params[:query] == "" %>
+  blurSearchField();
+<% elsif @products.empty? %>
+  modal.classList.add('show');
+  blurSearchField();
+  eventsArray.forEach((event) => {
+    window.addEventListener(event, () => { modal.classList.remove('show') });
+  });
+<% else %>
+  blurSearchField();
+  document.getElementById('products-index').scrollIntoView({behavior: "smooth", block: "start"});
+  productsContainer.innerHTML = "";
+  <% @products.order(name: :asc).each do |product| %>
+    productsContainer.insertAdjacentHTML("beforeend", "<%= j(render partial: 'shared/product_card', locals: {product: product}) %>");
+  <% end %>
+<% end %>
+  
+searchField.addEventListener('focus', () => { searchField.value = "" })

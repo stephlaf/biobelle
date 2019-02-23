@@ -8,6 +8,7 @@
 }
 .modal-title {
   color: $blue;
+  text-align: center;
 }
 .photos {
   padding: 10px;
@@ -20,4 +21,6 @@
 .btn:focus {
   outline: none;
 }
-
+.close {
+  
+}
