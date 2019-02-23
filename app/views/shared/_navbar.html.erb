@@ -5,43 +5,38 @@
   <% end %>
 
   <!-- Search Field -->
-  <form id="search-form" action="/products" autocomplete="off" data-remote="true">
-    <input type="text" name='query' class="" placeholder="Cherchez !">
-    <input type="submit" value="?" class="">
-  </form>
+  <div id="search-container">
+    <form id="search-form" action="/products" autocomplete="off" data-remote="true">
+      <input id="search-field" type="text" name='query' class="form-field" placeholder="Vous cherchez ?">
+      <%= button_tag type: 'submit', class: "", id: "search-icon" do %>
+              <i class="fas fa-search" aria-hidden="true"></i>
+          <% end %>
+    </form>
+  </div>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-  <%= link_to "Nos Produits", root_path(anchor: 'products-index'), class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= link_to "Qui est Biobelle ?", "/pages/about", class: "navbar-wagon-item navbar-wagon-link" %>
-  <%= mail_to "info@biobelle.ca", subject: "J'ai une petite question...", class: "navbar-wagon-item navbar-wagon-link mailto" do %>
-    <i class="far fa-envelope"></i>
-  <% end %>
-  
+    <%= link_to "Nos Produits", root_path(anchor: 'products-index'), class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Qui est Biobelle ?", "/pages/about", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= mail_to "info@biobelle.ca", subject: "J'ai une petite question...", class: "navbar-wagon-item navbar-wagon-link mailto" do %>
+      <i class="far fa-envelope"></i>
+    <% end %>
+    
 
     <% if user_signed_in? %>
-
-      <!-- Links when logged in -->
-
-      <%= link_to "Nouveau Produit", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Nouveau Distributeur", new_distributeur_path, class: "navbar-wagon-item navbar-wagon-link" %>
-
+    
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
           <%= image_tag "annie.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-              <% end %>
+              <%= link_to "Nouveau Produit", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
             </li>
             <li>
-              <%= link_to "#" do %>
-                <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
-              <% end %>
+              <%= link_to "Nouveau Distributeur", new_distributeur_path, class: "navbar-wagon-item navbar-wagon-link" %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
@@ -65,14 +60,26 @@
         <li><%= link_to "Nos Produits", root_path(anchor: 'products-index'), class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li><%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li><%= link_to "Qui est Biobelle ?", "/pages/about", class: "navbar-wagon-item navbar-wagon-link" %></li>
-        <li>
-          <%= mail_to "info@biobelle.ca", id: "mailto-drop", subject: "J'ai une petite question...", class: "navbar-wagon-item navbar-wagon-link" do %>
-            <i class="far fa-envelope"></i>
-          <% end %>
-        </li>
+        <% unless user_signed_in? %>
+          <li>
+            <%= mail_to "info@biobelle.ca", id: "mailto-drop",
+              subject: "J'ai une petite question...", class: "navbar-wagon-item navbar-wagon-link" do %>
+              <i class="far fa-envelope"></i>
+            <% end %>
+          </li>
+        <% end %>
         
         <% if user_signed_in? %>
           <!-- Links when logged in -->
+          <li class="cat-icon text-center">
+            <i class="fas fa-cat"></i>
+          </li>
+          <li>
+            <%= link_to "Nouveau Produit", new_product_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          </li>
+          <li>
+            <%= link_to "Nouveau Distributeur", new_distributeur_path, class: "navbar-wagon-item navbar-wagon-link" %>
+          </li>
           <li>
             <%= link_to destroy_user_session_path, method: :delete do %>
               <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
