@@ -1,38 +1,39 @@
 var productsContainer = document.getElementById('js-products');
+var display = document.getElementById('products-index');
 var modal = document.getElementById('searchModal');
+
 var eventsArray = ['click', 'keydown', 'touchstart'];
+
 var searchField = document.getElementById('search-field');
 var mobileSearchField = document.getElementById('mobile-search-field');
+var searchFieldsArray = [ searchField, mobileSearchField ];
 
-var mobileSearchIcon = document.getElementById('mobile-search-icon');
+var focus = () => {
+  searchFieldsArray.forEach((field) => {
+    field.addEventListener('focus', () => {
+      field.value = "";
+    });
+  });
+}
+
 var mobileDropdown = document.getElementById('mobile-dropdown');
 var mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
 
-var blurSearchField = () => { searchField.blur() };
-var blurMobileSearchField = () => { mobileSearchField.blur() };
+var hideAndBlurSearchFields = () => {
+  searchField.blur();
+  mobileSearchField.blur();
+  mobileDropdown.classList.remove('show', 'open');
+  mobileDropdownMenu.classList.remove('show', 'open');
+}
 
-
-document.addEventListener("DOMContentLoaded", function(event) {
-   console.log("DOM fully loaded and parsed");
- });
-
-
-// document.addEventListener("DOMContentLoaded", () => { console.log('focus') });
-mobileSearchIcon.addEventListener('click', console.log('focus'));
-// mobileSearchIcon.addEventListener('click', (e) => { console.log(e) });
-// mobileSearchIcon.addEventListener('click', () => { mobileSearchField.focus() });
+// ----------- Logic ---------------
 
 <% if params[:query] == "" %>
-  blurSearchField();
-  blurMobileSearchField();
-
-  mobileDropdown.classList.remove('show');
-  mobileDropdownMenu.classList.remove('show');
+  hideAndBlurSearchFields();
 
 <% elsif @products.empty? %>
   modal.classList.add('show');
-  blurSearchField();
-  blurMobileSearchField();
+  hideAndBlurSearchFields();
 
   eventsArray.forEach((event) => {
     window.addEventListener(event, () => { 
@@ -41,15 +42,14 @@ mobileSearchIcon.addEventListener('click', console.log('focus'));
   });
 
 <% else %>
-  blurSearchField();
-  blurMobileSearchField();
-  hideSearchField();
-  document.getElementById('products-index').scrollIntoView({behavior: "smooth", block: "start"});
+  hideAndBlurSearchFields();
+
+  display.scrollIntoView({behavior: "smooth", block: "start"});
+
   productsContainer.innerHTML = "";
   <% @products.order(name: :asc).each do |product| %>
     productsContainer.insertAdjacentHTML("beforeend", "<%= j(render partial: 'shared/product_card', locals: {product: product}) %>");
   <% end %>
 <% end %>
-  
-searchField.addEventListener('focus', () => { searchField.value = "" })
-mobileSearchField.addEventListener('focus', () => { mobileSearchField.value = "" })
+
+focus();
