@@ -5,7 +5,7 @@
   <% end %>
 
   <!-- Search Field -->
-  <div id="search-container">
+  <div id="search-container" class="hidden-xs hidden-sm">
     <form id="search-form" action="/products" autocomplete="off" data-remote="true">
       <input id="search-field" type="text" name='query' class="form-field" placeholder="Vous cherchez ?">
       <%= button_tag type: 'submit', class: "", id: "search-icon" do %>
@@ -52,10 +52,28 @@
     <% end %>
   </div>
 
+  <!-- Dropdown search bar appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div id="mobile-dropdown" class="dropdown">
+      <i id="mobile-search-icon" class="fas fa-search dropdown-toggle dropdown-big" data-toggle="dropdown"></i>
+
+      <ul id="mobile-dropdown-menu" class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <li>
+          <div id="mobile-search-container" class="">
+            <form id="search-form" action="/products" autocomplete="off" data-remote="true">
+              <input id="mobile-search-field" type="text" name='query' class="form-field" placeholder="Vous cherchez ?">
+            </form>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
   <!-- Dropdown list appearing on mobile only -->
   <div class="navbar-wagon-item hidden-md hidden-lg">
     <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle dropdown-big" data-toggle="dropdown"></i>
+      <i id="mobile-dropdown-icon" class="fa fa-bars dropdown-toggle dropdown-big" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li><%= link_to "Nos Produits", root_path(anchor: 'products-index'), class: "navbar-wagon-item navbar-wagon-link" %></li>
         <li><%= link_to "Nos Distributeurs", distributeurs_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
