@@ -4,7 +4,7 @@
 <%= render 'modal' %>
 <div id="into-view">
   <div id="products-index", class="container text-center">
-    <h1>Nos Produits</h1>
+    <h1 id="products-header">Nos Produits</h1>
     <div id="index" class="products">
       <div class="row" id="js-products">
         <% @products.order(name: :asc).each do |product| %>
