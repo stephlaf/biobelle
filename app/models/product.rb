@@ -11,7 +11,7 @@ class Product < ApplicationRecord
 
   include PgSearch
   pg_search_scope :search_by_all_fields,
-    against: [ :name, :short_desc, :description, :ingredients, :usage ],
+    against: [ :name, :ingredients ],
     using: {
       tsearch: { prefix: true }
     },
