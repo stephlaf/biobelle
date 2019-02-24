@@ -1,24 +1,55 @@
 var productsContainer = document.getElementById('js-products');
+var display = document.getElementById('products-index');
 var modal = document.getElementById('searchModal');
+
 var eventsArray = ['click', 'keydown', 'touchstart'];
+
 var searchField = document.getElementById('search-field');
-var blurSearchField = () => { searchField.blur() };
+var mobileSearchField = document.getElementById('mobile-search-field');
+var searchFieldsArray = [ searchField, mobileSearchField ];
+
+var focus = () => {
+  searchFieldsArray.forEach((field) => {
+    field.addEventListener('focus', () => {
+      field.value = "";
+    });
+  });
+}
+
+var mobileDropdown = document.getElementById('mobile-dropdown');
+var mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+
+var hideAndBlurSearchFields = () => {
+  searchField.blur();
+  mobileSearchField.blur();
+  mobileDropdown.classList.remove('show', 'open');
+  mobileDropdownMenu.classList.remove('show', 'open');
+}
+
+// ----------- Logic ---------------
 
 <% if params[:query] == "" %>
-  blurSearchField();
+  hideAndBlurSearchFields();
+
 <% elsif @products.empty? %>
   modal.classList.add('show');
-  blurSearchField();
+  hideAndBlurSearchFields();
+
   eventsArray.forEach((event) => {
-    window.addEventListener(event, () => { modal.classList.remove('show') });
+    window.addEventListener(event, () => { 
+      modal.classList.remove('show');
+      });
   });
+
 <% else %>
-  blurSearchField();
-  document.getElementById('products-index').scrollIntoView({behavior: "smooth", block: "start"});
+  hideAndBlurSearchFields();
+
+  display.scrollIntoView({behavior: "smooth", block: "start"});
+
   productsContainer.innerHTML = "";
   <% @products.order(name: :asc).each do |product| %>
     productsContainer.insertAdjacentHTML("beforeend", "<%= j(render partial: 'shared/product_card', locals: {product: product}) %>");
   <% end %>
 <% end %>
-  
-searchField.addEventListener('focus', () => { searchField.value = "" })
+
+focus();

@@ -133,3 +133,15 @@
   color: $bb-turquoise;
   }
 }
+#mobile-search-icon {
+  border: none;
+  background: transparent;
+  color: $blue;
+  font-size: 26px;
+  &:focus {
+    outline: none;
+  }
+}
+#mobile-dropdown-icon {
+  color: $blue;
+}
