@@ -50,6 +50,8 @@ var productsHeader = document.getElementById('products-header');
 
   productsContainer.innerHTML = "";
   productsHeader.innerText = "<%= pluralize(@products.count, 'résultat') %>"
+  productsHeader.classList.add('resultats-h1');
+  
   <% @products.order(name: :asc).each do |product| %>
     productsContainer.insertAdjacentHTML("beforeend", "<%= j(render partial: 'shared/product_card', locals: {product: product}) %>");
   <% end %>
