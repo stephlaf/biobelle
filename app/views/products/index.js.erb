@@ -26,6 +26,8 @@ var hideAndBlurSearchFields = () => {
   mobileDropdownMenu.classList.remove('show', 'open');
 }
 
+var productsHeader = document.getElementById('products-header');
+
 // ----------- Logic ---------------
 
 <% if params[:query] == "" %>
@@ -47,6 +49,9 @@ var hideAndBlurSearchFields = () => {
   display.scrollIntoView({behavior: "smooth", block: "start"});
 
   productsContainer.innerHTML = "";
+  productsHeader.innerText = "<%= pluralize(@products.count, 'résultat') %>"
+  productsHeader.classList.add('resultats-h1');
+  
   <% @products.order(name: :asc).each do |product| %>
     productsContainer.insertAdjacentHTML("beforeend", "<%= j(render partial: 'shared/product_card', locals: {product: product}) %>");
   <% end %>
