@@ -30,10 +30,10 @@ var productsHeader = document.getElementById('products-header');
 
 // ----------- Logic ---------------
 
-<% if params[:query] == "" %>
+<% if params[:query].blank? %>
   hideAndBlurSearchFields();
 
-<% elsif @products.empty? %>
+<% elsif @no_results %>
   modal.classList.add('show');
   hideAndBlurSearchFields();
 

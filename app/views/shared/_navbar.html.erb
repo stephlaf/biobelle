@@ -6,9 +6,9 @@
 
   <!-- Search Field -->
   <div id="search-container" class="hidden-xs hidden-sm">
-    <form id="search-form" action="/products" autocomplete="off" data-remote="true">
-      <input id="search-field" type="text" name='query' class="form-field" placeholder="Vous cherchez ?">
-      <%= button_tag type: 'submit', class: "", id: "search-icon" do %>
+    <form id="search-form" action="/products" autocomplete="off" >
+      <input value='<%= params[:query] %>' id="search-field" type="text" name='query' class="form-field" placeholder="Vous cherchez ?">
+      <%= button_tag type: 'submit', class: "", name: "", id: "search-icon" do %>
               <i class="fas fa-search" aria-hidden="true"></i>
           <% end %>
     </form>
@@ -60,8 +60,8 @@
       <ul id="mobile-dropdown-menu" class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
         <li>
           <div id="mobile-search-container" class="">
-            <form id="search-form" action="/products" autocomplete="off" data-remote="true">
-              <input id="mobile-search-field" type="text" name='query' class="form-field" placeholder="Vous cherchez ?">
+            <form id="search-form" action="/products" autocomplete="off" >
+              <input value='<%= params[:query] %>' id="mobile-search-field" type="text" name='query' class="form-field" placeholder="Vous cherchez ?">
             </form>
           </div>
         </li>
