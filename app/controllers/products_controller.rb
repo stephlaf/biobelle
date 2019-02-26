@@ -1,10 +1,14 @@
 class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
   before_action :set_product, only: [ :show, :edit, :update, :destroy ]
-  
+
   def index
     if params[:query].present?
       @products =  policy_scope(Product).search_by_all_fields(params[:query])
+      if @products.empty?
+        @products =  policy_scope(Product)
+        @no_results = true
+      end
     else
       @products =  policy_scope(Product)
     end
