@@ -14,6 +14,7 @@ gem "carrierwave"
 gem 'cloudinary'
 gem 'pundit'
 gem 'pg_search'
+gem "nokogiri", ">= 1.10.4"
 
 gem 'autoprefixer-rails'
 # gem 'materialize-sass', '~> 1.0.0.rc2'
