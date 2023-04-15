@@ -1,3 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
 
-Personal project for my wife's company, Biobelle.ca.
+Biobelle offers natural and handmade cosmetic and skin care products. Visit us, for a conscious well-being.\
+Live website is to be found [here](https://www.biobelle.ca/)
